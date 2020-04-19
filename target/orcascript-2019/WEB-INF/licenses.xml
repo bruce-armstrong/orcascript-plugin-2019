@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='orcascript-2019' version='0.2'><l:dependency name='Jenkins Orcascript Plugin' groupId='org.jenkins-ci.plugins' artifactId='orcascript-2019' version='0.2' url=''><l:description>Allows using Orcascript to generate PowerBuilder PBLs from source</l:description><l:license name='MIT license' url=''/></l:dependency></l:dependencies>

@@ -1,0 +1,5 @@
+hudson.plugins.orcascript.OrcascriptBuilder$DescriptorImpl
+hudson.plugins.orcascript.OrcascriptErrorNote$DescriptorImpl
+hudson.plugins.orcascript.OrcascriptInstallation$DescriptorImpl
+hudson.plugins.orcascript.OrcascriptKillingVeto
+hudson.plugins.orcascript.OrcascriptWarningNote$DescriptorImpl

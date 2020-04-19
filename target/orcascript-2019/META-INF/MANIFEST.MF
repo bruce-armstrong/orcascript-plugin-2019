@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Built-By: brucearmstrong2
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_251
+Extension-Name: orcascript-2019
+Specification-Title: Allows using Orcascript to generate PowerBuilder 
+ PBLs from source
+Implementation-Title: orcascript-2019
+Implementation-Version: 0.2
+Group-Id: org.jenkins-ci.plugins
+Short-Name: orcascript-2019
+Long-Name: Jenkins Orcascript Plugin
+Plugin-Version: 0.2
+Hudson-Version: 1.625
+Jenkins-Version: 1.625
+Plugin-Dependencies: structs:1.3
+Plugin-Developers: Bruce Armstrong:bruce:me@brucearmstrong.org
+

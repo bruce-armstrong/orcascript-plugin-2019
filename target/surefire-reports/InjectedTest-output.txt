@@ -1,0 +1,45 @@
+Apr 18, 2020 3:00:42 PM org.eclipse.jetty.util.log.Log initialized
+INFO: Logging initialized @1539ms
+Picking up existing exploded jenkins.war at D:\orcascript-plugin-2019\target\jenkins-for-test
+Apr 18, 2020 3:00:45 PM org.eclipse.jetty.server.handler.ContextHandler setContextPath
+WARNING: Empty contextPath
+Apr 18, 2020 3:00:45 PM org.eclipse.jetty.server.Server doStart
+INFO: jetty-9.2.12.v20150709
+Apr 18, 2020 3:00:45 PM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+Apr 18, 2020 3:00:45 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started o.e.j.w.WebAppContext@226b143b{/,file:/D:/orcascript-plugin-2019/target/jenkins-for-test/,AVAILABLE}{D:\orcascript-plugin-2019\target\jenkins-for-test}
+Apr 18, 2020 3:00:45 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started ServerConnector@1eb6e1c{HTTP/1.1}{localhost:58200}
+Apr 18, 2020 3:00:45 PM org.eclipse.jetty.server.Server doStart
+INFO: Started @5015ms
+Apr 18, 2020 3:00:45 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started initialization
+Apr 18, 2020 3:01:24 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Listed all plugins
+Apr 18, 2020 3:01:30 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Prepared all plugins
+Apr 18, 2020 3:01:31 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started all plugins
+Apr 18, 2020 3:01:31 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Augmented all extensions
+Apr 18, 2020 3:01:37 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Loaded all jobs
+Apr 18, 2020 3:01:37 PM org.jenkinsci.main.modules.sshd.SSHD start
+INFO: Started SSHD at port 58212
+Apr 18, 2020 3:01:37 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Completed initialization
+Apr 18, 2020 3:01:37 PM org.eclipse.jetty.server.Server doStart
+INFO: jetty-9.2.12.v20150709
+Apr 18, 2020 3:01:37 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started o.e.j.s.ServletContextHandler@4315e9af{/,null,AVAILABLE}
+Apr 18, 2020 3:01:37 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started ServerConnector@479f2dc2{HTTP/1.1}{0.0.0.0:58214}
+Apr 18, 2020 3:01:37 PM org.eclipse.jetty.server.Server doStart
+INFO: Started @57193ms
+Apr 18, 2020 3:01:42 PM org.eclipse.jetty.server.AbstractConnector doStop
+INFO: Stopped ServerConnector@1eb6e1c{HTTP/1.1}{localhost:0}
+Apr 18, 2020 3:01:42 PM org.eclipse.jetty.server.handler.ContextHandler doStop
+INFO: Stopped o.e.j.w.WebAppContext@226b143b{/,file:/D:/orcascript-plugin-2019/target/jenkins-for-test/,UNAVAILABLE}{D:\orcascript-plugin-2019\target\jenkins-for-test}
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.

@@ -1,0 +1,4 @@
+META-INF\annotations\org.jenkinsci.Symbol
+hudson\plugins\orcascript\OrcascriptBuilder.stapler
+hudson\plugins\orcascript\OrcascriptInstallation.stapler
+META-INF\annotations\hudson.Extension
