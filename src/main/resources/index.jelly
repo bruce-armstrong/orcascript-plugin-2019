@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-    This plugin makes it possible to generate PowerBuilder PBLs from source code.
+    This plugin makes it possible to generate PowerBuilder PBLs from source code using OrcaScript.
 </div>

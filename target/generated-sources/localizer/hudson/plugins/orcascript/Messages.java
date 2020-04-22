@@ -24,25 +24,25 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code Orcascript.WarningNoteDescription}: {@code Orcascript
-     * warning}.
+     * Key {@code Orcascript.DisplayName}: {@code Create PowerBuilder PBLs
+     * from source code using OrcaScript}.
      * 
      * @return
-     *     {@code Orcascript warning}
+     *     {@code Create PowerBuilder PBLs from source code using OrcaScript}
      */
-    public static String Orcascript_WarningNoteDescription() {
-        return holder.format("Orcascript.WarningNoteDescription");
+    public static String Orcascript_DisplayName() {
+        return holder.format("Orcascript.DisplayName");
     }
 
     /**
-     * Key {@code Orcascript.WarningNoteDescription}: {@code Orcascript
-     * warning}.
+     * Key {@code Orcascript.DisplayName}: {@code Create PowerBuilder PBLs
+     * from source code using OrcaScript}.
      * 
      * @return
-     *     {@code Orcascript warning}
+     *     {@code Create PowerBuilder PBLs from source code using OrcaScript}
      */
-    public static Localizable _Orcascript_WarningNoteDescription() {
-        return new Localizable(holder, "Orcascript.WarningNoteDescription");
+    public static Localizable _Orcascript_DisplayName() {
+        return new Localizable(holder, "Orcascript.DisplayName");
     }
 
     /**
@@ -66,25 +66,25 @@ public class Messages {
     }
 
     /**
-     * Key {@code Orcascript.DisplayName}: {@code Create PowerBuilder PBLs
-     * from source code}.
+     * Key {@code Orcascript.WarningNoteDescription}: {@code Orcascript
+     * warning}.
      * 
      * @return
-     *     {@code Create PowerBuilder PBLs from source code}
+     *     {@code Orcascript warning}
      */
-    public static String Orcascript_DisplayName() {
-        return holder.format("Orcascript.DisplayName");
+    public static String Orcascript_WarningNoteDescription() {
+        return holder.format("Orcascript.WarningNoteDescription");
     }
 
     /**
-     * Key {@code Orcascript.DisplayName}: {@code Create PowerBuilder PBLs
-     * from source code}.
+     * Key {@code Orcascript.WarningNoteDescription}: {@code Orcascript
+     * warning}.
      * 
      * @return
-     *     {@code Create PowerBuilder PBLs from source code}
+     *     {@code Orcascript warning}
      */
-    public static Localizable _Orcascript_DisplayName() {
-        return new Localizable(holder, "Orcascript.DisplayName");
+    public static Localizable _Orcascript_WarningNoteDescription() {
+        return new Localizable(holder, "Orcascript.WarningNoteDescription");
     }
 
 }
