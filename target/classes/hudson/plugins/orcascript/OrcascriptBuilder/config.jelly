@@ -23,12 +23,10 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
-    <f:entry title="${%Orcascript Version}">
-        <select class="setting-input" name="orcascrtipBuilder.orcascriptName">
-            <option>(Default)</option>
-            <j:forEach var="inst" items="${descriptor.installations}">
-                <f:option selected="${inst.name==instance.orcascriptName}">${inst.name}</f:option>
-            </j:forEach>
+    <f:entry title="${%Orcascript Version}" field="execName">
+        <select name="orcascriptBuilder.execName">
+        	<f:option value="orcascr170.exe" selected="${instance.execName.equals('orcascr170.exe')? 'true':null}">2017</f:option>
+			<f:option value="orcascr190.exe" selected="${instance.execName.equals('orcascr190.exe')? 'true':null}">2019</f:option>        	
         </select>
     </f:entry>
     <f:entry title="${%PBT File}" field="pbtFile">

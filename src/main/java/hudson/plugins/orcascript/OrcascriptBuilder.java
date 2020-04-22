@@ -24,9 +24,11 @@
 package hudson.plugins.orcascript;
 
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.io.Writer;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 
@@ -58,6 +60,7 @@ public class OrcascriptBuilder extends Builder {
 	/**
 	 * GUI fields
 	 */
+	private final String execName;
 	private final String orcascriptName;
 	private final String pbtFile;
 	private final String excludeLiblist;
@@ -69,6 +72,8 @@ public class OrcascriptBuilder extends Builder {
 	 * When this builder is created in the project configuration step, the
 	 * builder object will be created from the strings below.
 	 *
+	 * @param execName
+	 *		      The name of the orcascript utility file
 	 * @param orcascriptName
 	 *            The Orcascript logical name
 	 * @param pbtFile
@@ -84,8 +89,9 @@ public class OrcascriptBuilder extends Builder {
 	 *            If true, job will be unstable if there are warnings
 	 */
 	@DataBoundConstructor
-	public OrcascriptBuilder(String orcascriptName, String pbtFile, String excludeLiblist,
+	public OrcascriptBuilder(String execName, String orcascriptName, String pbtFile, String excludeLiblist,
 			String refreshType, boolean continueOnBuildFailure, boolean unstableIfWarnings) {
+		this.execName = execName;
 		this.orcascriptName = orcascriptName;
 		this.pbtFile = pbtFile;
 		this.refreshType = refreshType ;
@@ -94,6 +100,10 @@ public class OrcascriptBuilder extends Builder {
 		this.unstableIfWarnings = unstableIfWarnings;
 	}
 
+	public String getExecName() {
+		return execName;
+	}
+	
 	public String getExcludeLiblist() {
 		return excludeLiblist;
 	}
@@ -137,11 +147,10 @@ public class OrcascriptBuilder extends Builder {
 	public boolean runOrcaScript(AbstractBuild<?, ?> build, Launcher launcher, BuildListener listener)
 			throws InterruptedException, IOException {
 		ArgumentListBuilder args = new ArgumentListBuilder();
-		String execName = "orcascr190.exe";
 		OrcascriptInstallation ai = getOrcascript();
 
 		if (ai == null) {
-			listener.getLogger().println("Path To orcascr190.exe: " + execName);
+			listener.getLogger().println("Path To orcascript: " + execName);
 			args.add(execName);
 		} else {
 			EnvVars env = build.getEnvironment(listener);
@@ -162,7 +171,7 @@ public class OrcascriptBuilder extends Builder {
 					return false;
 				}
 
-				listener.getLogger().println("Path To orcascr190.exe: " + pathToOrcascript);
+				listener.getLogger().println("Path To orcascript: " + pathToOrcascript);
 				args.add(pathToOrcascript);
 
 				if (ai.getDefaultArgs() != null) {
@@ -178,8 +187,8 @@ public class OrcascriptBuilder extends Builder {
 		String orcascript = build.getWorkspace() + "\\orcascript.orca";
 		try {
 			File file = new File(orcascript);
-			FileWriter fw = new FileWriter(file, false);
-			pw = new PrintWriter(fw);
+			Writer w = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
+			pw = new PrintWriter(w);
 			pw.println("start session");
 			// pw.println("set debug true");
 			// pw.println("scc set connect property logfile
@@ -218,7 +227,7 @@ public class OrcascriptBuilder extends Builder {
 			OrcascriptConsoleParser mbcp = new OrcascriptConsoleParser(listener.getLogger(), build.getCharset());
 			OrcascriptConsoleAnnotator annotator = new OrcascriptConsoleAnnotator(listener.getLogger(),
 					build.getCharset());
-			// Launch orcascript190.exe
+			// Launch orcascript
 			int r = launcher.launch().cmds(args).envs(env).stdout(mbcp).stdout(annotator).pwd(pwd).join();
 			// Check the number of warnings
 			if (unstableIfWarnings && mbcp.getNumberOfWarnings() > 0) {
