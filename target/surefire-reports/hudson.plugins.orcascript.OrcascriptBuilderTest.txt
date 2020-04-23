@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: hudson.plugins.orcascript.OrcascriptBuilderTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.482 sec - in hudson.plugins.orcascript.OrcascriptBuilderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 sec - in hudson.plugins.orcascript.OrcascriptBuilderTest

@@ -134,7 +134,9 @@ public class OrcascriptBuilder extends Builder {
 			if (orcascriptName != null && i.getName().equals(orcascriptName))
 				return i;
 		}
-
+		if ( descriptor.getInstallations().length == 1 ) {
+			return descriptor.getInstallations()[0];
+		}
 		return null;
 	}
 
